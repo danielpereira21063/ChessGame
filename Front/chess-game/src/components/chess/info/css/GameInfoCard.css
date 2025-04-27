@@ -1,0 +1,76 @@
+/* =============================================================== */
+/* GAME INFO CARD – DARK THEME                                     */
+/* =============================================================== */
+
+/* 1 ▸ paleta base — ajuste aqui para mudar o “tema” todo de uma vez */
+:root {
+    --card-bg: #1e1e1e;
+    --card-border: #2d2d2d;
+    --card-header-bg: #262626;
+    --card-header-tx: #e6e6e6;
+    --item-bg: transparent;
+    --item-hover: #333;
+    --text-main: #d0d0d0;
+    --text-muted: #8a8a8a;
+    --scrollbar-bg: #2c2c2c;
+    --scrollbar-thumb: #555;
+    --shadow: 0 3px 8px rgba(0, 0, 0, .6);
+}
+
+/* 2 ▸ card container */
+.game-info-card.card {
+    background: var(--card-bg) !important;
+    color: var(--text-main);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+}
+
+/* 3 ▸ header */
+.game-info-card .card-header {
+    background: var(--card-header-bg);
+    color: var(--card-header-tx);
+    border-bottom: 1px solid var(--card-border);
+}
+
+/* 4 ▸ list items */
+.game-info-card .list-group-item {
+    background: var(--item-bg);
+    border-color: var(--card-border);
+    color: var(--text-main);
+    transition: background .15s;
+}
+
+.game-info-card .list-group-item:hover {
+    background: var(--item-hover);
+}
+
+/* 5 ▸ muted index “1.”, “2.” … */
+.game-info-card .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* 6 ▸ scrollbar (webkit) */
+.game-info-card .history-scroll {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.game-info-card .history-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.game-info-card .history-scroll::-webkit-scrollbar-track {
+    background: var(--scrollbar-bg);
+}
+
+.game-info-card .history-scroll::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+/* 7 ▸ make the card stretch full height beside the board */
+@media (min-width: 768px) {
+    .game-info-card {
+        height: 100%;
+    }
+}

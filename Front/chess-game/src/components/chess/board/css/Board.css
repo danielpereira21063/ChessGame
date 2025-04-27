@@ -1,0 +1,17 @@
+.board {
+    --max-size: 90vmin;
+    width: var(--max-size);
+    height: var(--max-size);
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    margin: 0 auto;
+}
+
+@media (max-width: 400px) {
+    .board {
+        --max-size: 100vw;
+    }
+}

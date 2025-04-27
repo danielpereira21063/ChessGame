@@ -1,0 +1,61 @@
+/* ==================================================================== */
+/*  cores-base e layout (mantém iguais)                                 */
+/* ==================================================================== */
+.square {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* base p/ pseudo-elemento */
+}
+
+.square--dark {
+    background: #769656;
+}
+
+.square--light {
+    background: #eeeed2;
+}
+
+.piece {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ==================================================================== */
+/*  bolinha preta para QUALQUER destino possível (vazio ou captura)     */
+/* ==================================================================== */
+.square--move::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22%;
+    /* proporção da célula; ajuste se quiser menor/maior */
+    height: 22%;
+    background: rgba(220, 53, 69, 0.65);
+    border-radius: 50%;
+    opacity: 0.85;
+    /* mantém a peça visível por baixo */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* não intercepta cliques */
+}
+
+/* ==================================================================== */
+/*  realce azul da peça selecionada (opcional)                          */
+/* ==================================================================== */
+.board {
+    --select-square: rgba(30 136 229 / .45);
+}
+
+.square--selected {
+    background: var(--select-square);
+}
+
+.square--check {
+    background-color: rgba(220, 53, 69, 0.65); /* vermelho   */
+  }
