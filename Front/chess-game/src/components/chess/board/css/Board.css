@@ -1,5 +1,5 @@
 .board {
-    --max-size: 90vmin;
+    --max-size: 85vmin;
     width: var(--max-size);
     height: var(--max-size);
 
@@ -13,5 +13,6 @@
 @media (max-width: 400px) {
     .board {
         --max-size: 100vw;
+        --max-size: 100vmin;
     }
 }

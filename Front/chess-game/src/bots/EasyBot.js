@@ -1,9 +1,8 @@
 import { getLegalMoves } from '../util/chess/moveCalculator';
 
-export default function randomBot(state, dispatch) {
+export default function EasyBot(state, dispatch) {
   const { board, turn, moves, selected, enPassant, castling } = state;
 
-  /* 1 ▸ nenhuma peça ainda selecionada → escolher uma com lances */
   if (!selected) {
     // gera lista [ { square, legalMoves } , … ]
     const candidates = board.flat()

@@ -17,8 +17,6 @@ export class BoardGenerator {
     return this.#fenToBoardArray(fen);
   }
 
-  /* ---------- implementation details ---------- */
-
   #fenToBoardArray(fen) {
     const [piecePlacement] = fen.split(' ');
     const ranks = piecePlacement.split('/');
@@ -50,7 +48,7 @@ export class BoardGenerator {
         });
       }
 
-      return squares; // já tem sempre 8 casas após o loop
+      return squares;
     });
   }
 
